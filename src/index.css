@@ -1,13 +1,262 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin : 0px;
+  padding : 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-image: url("./img/background2.jpg");
+}
+
+.background-enter {
+  transform: translate(100%);
+}
+.background-enter.background-enter-active {
+  transform: translate(0%);
+  transition: transform 1000ms ease-in-out;
+}
+.background-leave {
+  transform: translate(0%);
+}
+.background-leave.background-leave-active {
+  transform: translate(-100%);
+  transition: transform 1000ms ease-in-out;
+}
+
+.searchForm {
+  width : 100vw;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+#currentRange {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background:green;
+  padding: 7px 10px;
+  margin: auto;
+}
+
+.booksGrid {
+  display : flex;
+  justify-content: center;
+  margin : auto;
+  width : 100%;
+  padding : 5%;
+}
+
+.bookHeading {
+  /* font-family: 'Girassol', cursive; */
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+}
+
+#label {
+  font-weight: bold;
+}
+
+.CardView
+{
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.26);
+  height: 5%;
+  width: 20%;
+  margin: 20px;
+  align-items: center;
+  background-color: #e3e3e3;
+  border-radius: 20px;
+
+}
+.CardView:hover {
+  cursor: pointer;
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 20px;
+    background-color: #e3e3e3;
+  }
+
+#cardImage {
+  border-radius: 20px;
+}
+
+#card {
+  width: fit-content;
+  background-color: white;
+  margin : auto;
+  height : 90vh;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px rgba(41, 39, 39, 0.349);
+  -moz-box-shadow: 10px 10px 5px rgba(41, 39, 39, 0.349);
+  -webkit-box-shadow: 10px 10px 5px rgba(41, 39, 39, 0.349);
+  -khtml-box-shadow: 10px 10px 5px rgba(41, 39, 39, 0.349);
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#bookDetails {
+  margin : auto;
+  width : 95vw;
+  height : fit-content;
+  border-radius: 20px;
+}
+
+/* addBook form styling */
+.AddBookForm
+{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  float:left;
+  margin-left: 40%;
+  margin-right: 40%;
+  /* height: 300px; */
+  /* width: 300px; */
+  padding: 30px 40px;
+  align-items: center;
+  background-color: #e3e3e3;
+
+}
+.AddBookForm input
+{
+  padding: 10px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #380b5c;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  width: 200px;
+  border-radius: 5px;
+  
+}
+
+.AddBookForm button
+{
+  border: none;
+  padding: 10px;
+  background-color: #380b5c;
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+/* login Form styling */
+
+.loginForm
+{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  float:left;
+  margin-left: 40%;
+  margin-right: 40%;
+  /* height: 300px; */
+  /* width: 300px; */
+  padding: 30px 40px;
+  align-items: center;
+  background-color: #e3e3e3;;
+}
+.loginForm input
+{
+  padding: 10px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #380b5c;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  width: 200px;
+  border-radius: 5px;
+}
+.loginForm button
+{
+
+  border: none;
+  padding: 10px;
+  background-color: #380b5c;
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+/* Register form styling */
+
+.RegisterForm
+{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  float:left;
+  margin-left: 40%;
+  margin-right: 40%;
+  /* height: 300px; */
+  /* width: 300px; */
+  padding: 30px 40px;
+  align-items: center;
+  background-color: #e3e3e3;
+}
+.RegisterForm input
+{
+  padding: 10px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #380b5c;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  width: 200px;
+  border-radius: 5px;
+}
+.RegisterForm button
+{
+  border: none;
+  padding: 10px;
+  background-color: #380b5c;
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.DeleteBook
+{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  float:left;
+  margin-left: 40%;
+  margin-right: 40%;
+  /* height: 300px; */
+  /* width: 300px; */
+  padding: 30px 40px;
+  align-items: center;
+  background-color: #e3e3e3;
+}
+.DeleteBook input
+{
+  padding: 10px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #380b5c;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  width: 200px;
+  border-radius: 5px;
+}
+.DeleteBook button
+{
+  border: none;
+  padding: 10px;
+  background-color: #380b5c;
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
 }
